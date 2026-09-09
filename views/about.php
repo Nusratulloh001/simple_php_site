@@ -1,7 +1,5 @@
 <?php 
 
-require __DIR__ . "/includes/session.php";
-$pageTitle = "О нас - Портфолио";
 
 require __DIR__ . "/includes/header.php" ?>
     <main>
@@ -75,4 +73,6 @@ require __DIR__ . "/includes/header.php" ?>
         <h2>Let's Connect</h2>
         <p>If you are looking for a reliable developer to bring your ideas to life, build custom backend solutions, or automate complex processes, feel free to reach out!</p>
     </main>
-<?php require "./includes/footer.php" ?>
+<?php 
+require __DIR__ . "/../views/includes/footer.php";
+?>

@@ -1,9 +1,5 @@
 <?php
 
-require __DIR__ . "/includes/session.php";
-
-$pageTitle = "Главная - Портфолио";
-
 require __DIR__ . "/includes/header.php" ;
 ?>
     <main>

@@ -1,13 +1,9 @@
 <?php
 
-require __DIR__ . "/includes/session.php";
-
-$pageTitle = "Регистрация - Портфолио";
-
-require __DIR__ . "/includes/header.php" ?>
+require __DIR__ . "/../views/includes/header.php" ?>
     <main>
         <h1>Регистрация нового пользователя</h1>
-        <form action="register.php" method="POST">
+        <form action="/register" method="POST">
             <div>
                 <label for="username">Имя пользователя:</label><br>
                 <input type="text" id="username" name="username" required>
@@ -30,6 +26,6 @@ require __DIR__ . "/includes/header.php" ?>
             <br>
             <button type="submit">Зарегистрироваться</button>
         </form>
-        <p>Уже зарегистрированы? <a href="/pages/login.php">Войти</a></p>
+        <p>Уже зарегистрированы? <a href="/login">Войти</a></p>
     </main>
 <?php require __DIR__ . "/includes/footer.php" ?>

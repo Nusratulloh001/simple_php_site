@@ -1,15 +1,8 @@
 <?php
-require __DIR__ . "/includes/session.php";
 
-$pageTitle = "Профиль - Портфолио";
-$user = $_SESSION['user'];
+require __DIR__ . "/../views/includes/header.php";
 
-if (!isLoggedIn('user')) {
-    header('Location: /pages/login.php');
-    exit;
-}
-
-require __DIR__ . "/includes/header.php" ?>
+?>
     <main>
         <h1>Профиль пользователя</h1>
         <section>
