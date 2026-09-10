@@ -1,6 +1,9 @@
 <?php
 
 require __DIR__ . "/../views/includes/session.php";
-$pageTitle = "О нас - Портфолио";
 
-require __DIR__ . "/../views/about.php";
+view("/../views/about.php", 
+    [
+        'pageTitle' => "О нас - Портфолио"
+    ]
+);

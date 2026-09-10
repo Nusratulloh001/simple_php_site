@@ -2,12 +2,15 @@
 
 require __DIR__ . "/../views/includes/session.php";
 
-$pageTitle = "Профиль - Портфолио";
+
 $user = $_SESSION['user'];
 
 if (!isLoggedIn('user')) {
-    header('Location: /controllers/login.controller.php');
+    header('Location: /login');
     exit;
 }
 
-require __DIR__ . "/../views/profile.php";
+view("/../views/profile.php", [
+    'pageTitle' => "Профиль - Портфолио",
+    'user' => $user
+]);

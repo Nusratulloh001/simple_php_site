@@ -17,7 +17,7 @@ if (!isLoggedIn('user')) {
                 'email' => 'admin@example.com',
                 'role' => 'Administrator'
             ];
-            header("Location: /controllers/profile.controller.php");
+            header("Location: /profile");
             exit;
         } else {
             $error = 'Неверный логин или пароль!';
@@ -25,4 +25,7 @@ if (!isLoggedIn('user')) {
     }
 }
 
-require __DIR__ . "/../views/login.php";
+view("/../views/login.php",[
+    'pageTitle' => $pageTitle,
+    'error' => $error
+]);

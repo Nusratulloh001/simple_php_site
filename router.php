@@ -19,5 +19,5 @@ $routes = [
 if (array_key_exists($path, $routes)) {
     require __DIR__ . $routes[$path];
 } else {
-    abort(404);
+    abort(__DIR__ . '/controllers/error.controller.php', 404);
 }

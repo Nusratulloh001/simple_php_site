@@ -1,8 +1,14 @@
 <?php
 
-function abort ($code = 404) : void {
+function abort (string $viewOrController, int $code) : void {
     http_response_code($code);
-    require __DIR__ . "/../controllers/error.controller.php";
+    require $viewOrController;
+}
+
+function view (string $view, array $data = []) : void
+{
+    extract($data);
+    require __DIR__ . $view;
 }
 
 function d (mixed $value) : void
