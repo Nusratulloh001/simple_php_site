@@ -17,5 +17,6 @@
                 <a href="/logout">Выход</a> |
                 <a href="/profile">Профиль</a>
             <?php endif; ?>
+                <a href="/poligon">Полигин</a>
         </nav>
     </header>

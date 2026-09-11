@@ -14,6 +14,7 @@ $routes = [
     '/profile'  => '/controllers/profile.controller.php',
     '/logout'   => '/controllers/logout.controller.php',
     '/register' => '/controllers/register.controller.php',
+    '/poligon'  => '/controllers/poligon.controller.php'
 ];
 
 if (array_key_exists($path, $routes)) {
