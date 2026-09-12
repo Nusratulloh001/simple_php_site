@@ -1,9 +1,12 @@
 <?php
 
 require_once __DIR__ . "/../views/includes/session.php";
+require __DIR__ . "/../classes/DB.php";
+
+$db = new DB;
 
 $pageTitle = "Вход - Портфолио";
-$error = null;
+$errors = [];
 
 
 if (!isLoggedIn('user')) {
@@ -11,11 +14,15 @@ if (!isLoggedIn('user')) {
         $login = trim($_POST['login']) ?? '';
         $password = trim($_POST['password']) ?? '';
 
-        if ($login === 'admin' && $password === "secret") {
-            $_SESSION['user'] = [
-                'userName' => "Nusrat",
-                'email' => 'admin@example.com',
-                'role' => 'Administrator'
+        $user = $db -> query(
+            "SELECT * FROM users WHERE email = :email", 
+            ['email' => $login]
+        ) -> fetch();
+        if (password_verify($password, $user['password'])) {
+            $_SESSION[$user['role']] = [
+                'userName' => $user['username'],
+                'email' => $user['email'],
+                'role' => $user['role']
             ];
             header("Location: /profile");
             exit;
@@ -27,5 +34,5 @@ if (!isLoggedIn('user')) {
 
 view("/../views/login.php",[
     'pageTitle' => $pageTitle,
-    'error' => $error
+    'errors' => $errors
 ]);

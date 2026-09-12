@@ -20,6 +20,3 @@ class DB {
         return $statement;
     }
 }
-
-
-

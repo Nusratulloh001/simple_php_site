@@ -6,9 +6,7 @@ require __DIR__ . "/includes/header.php";
     <main>
         <h1>Вход в систему</h1>
 
-        <?php if ($error) : ?>
-            <p style="color: red"><?= htmlspecialchars($error) ?></p>
-        <?php endif; ?>
+        
         
         <form action="/login" method="POST">
             <div>
