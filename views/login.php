@@ -6,8 +6,9 @@ require __DIR__ . "/includes/header.php";
     <main>
         <h1>Вход в систему</h1>
 
-        
-        
+        <?php foreach ($errors as $error) : ?>
+            <p style="color: red;"><?= $error ?></p>
+        <?php endforeach; ?>
         <form action="/login" method="POST">
             <div>
                 <label for="email">Email или Логин:</label><br>
