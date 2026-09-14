@@ -8,8 +8,7 @@ $db = new DB;
 $pageTitle = "Вход - Портфолио";
 $errors = [];
 
-
-if (!isLoggedIn('user')) {
+if (!inSessin()) {
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         $login = trim($_POST['login']) ?? '';
         $password = trim($_POST['password']) ?? '';

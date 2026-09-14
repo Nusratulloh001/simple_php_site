@@ -10,7 +10,7 @@
         <nav>
             <a href="/">Главная</a> |
             <a href="/about">О нас</a> |
-            <?php if (!isset($_SESSION['user'])) : ?>
+            <?php if (!inSessin()) : ?>
                 <a href="/login">Вход</a> |
                 <a href="/register">Регистрация</a> |
             <?php else: ?>
