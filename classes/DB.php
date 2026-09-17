@@ -13,7 +13,7 @@ class DB {
         ]);
     }
     
-    public function query (string $query, array $params = []) : object 
+    public function query (string $query, array $params = []) : PDOStatement 
     {
         $statement = $this -> connection -> prepare($query);
         $statement -> execute($params);

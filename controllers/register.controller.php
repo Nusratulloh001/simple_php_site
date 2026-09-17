@@ -68,7 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION[$role] = [
                 'userName' => $username,
                 'email' => $email,
-                'role' => $role
+                'role' => $role,
+                'password' => $password
             ];
             header('Location: /profile');
             exit();

@@ -38,7 +38,8 @@ if (!inSessin()) {
             $_SESSION[$user['role']] = [
                 'userName' => $user['username'],
                 'email' => $user['email'],
-                'role' => $user['role']
+                'role' => $user['role'],
+                'password' => $user['password']
             ];
             header("Location: /profile");
             exit;
