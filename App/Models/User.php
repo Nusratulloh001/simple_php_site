@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Models;
+
+
 class User {
     protected int $id;
     protected string $name;
@@ -9,11 +12,9 @@ class User {
     protected string $created;
     protected string $updated;
 
-    protected DB $db;
-
     public function __construct()
     {
-        $this -> db = new DB;
+        
     }
 
     protected function init () : void

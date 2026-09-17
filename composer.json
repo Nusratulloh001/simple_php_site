@@ -1,0 +1,16 @@
+{
+    "name": "nusret/site",
+    "description": "Simple testing project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nusratulloh001",
+            "email": "nusratulloh001@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -10,13 +10,19 @@
         <nav>
             <a href="/">Главная</a> |
             <a href="/about">О нас</a> |
-            <?php if (!inSessin()) : ?>
+            
+                <!-- PHP code. if (inSession()) -->
+            
                 <a href="/login">Вход</a> |
                 <a href="/register">Регистрация</a> |
-            <?php else: ?>
+
+                <!-- PHP code -->
+
                 <a href="/logout">Выход</a> |
                 <a href="/profile">Профиль</a>
-            <?php endif; ?>
+                
+                <!-- PHP code  -->
+
                 <a href="/poligon">Полигин</a>
         </nav>
     </header>

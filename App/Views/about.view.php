@@ -1,7 +1,7 @@
 <?php 
 
 
-require __DIR__ . "/includes/header.php" ?>
+require __DIR__ . "/Components/header.php" ?>
     <main>
         <h1>About Me</h1>
 
@@ -74,5 +74,5 @@ require __DIR__ . "/includes/header.php" ?>
         <p>If you are looking for a reliable developer to bring your ideas to life, build custom backend solutions, or automate complex processes, feel free to reach out!</p>
     </main>
 <?php 
-require __DIR__ . "/../views/includes/footer.php";
+require __DIR__ . "/Components/footer.php";
 ?>
