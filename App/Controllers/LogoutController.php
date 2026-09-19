@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "/../views/includes/session.php";
+// require __DIR__ . "/../views/includes/session.php";
 
 session_unset();
 session_destroy();

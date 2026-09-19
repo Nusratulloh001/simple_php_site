@@ -1,8 +1,7 @@
 <?php
 
 
-require __DIR__ . "/../views/includes/session.php";
-require __DIR__ . "/../classes/DB.php";
+use App\Modules\Databases\DB;
 
 $db = new DB;
 
@@ -77,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-view("/../views/register.php", [
+view("/../Views/register.view.php", [
     'pageTitle' => "Регистрация - Портфолио",
     'errors' => $errors
 ]);

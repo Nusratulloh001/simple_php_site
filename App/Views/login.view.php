@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "/includes/header.php";
+require __DIR__ . "/Components/header.php";
 
 ?>
     <main>
@@ -24,4 +24,4 @@ require __DIR__ . "/includes/header.php";
         </form>
         <p>Ещё нет аккаунта? <a href="/register">Зарегистрироваться</a></p>
     </main>
-<?php require __DIR__ . "/includes/footer.php" ?>
+<?php require __DIR__ . "/Components/footer.php" ?>

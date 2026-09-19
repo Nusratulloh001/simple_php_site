@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Modules\Databases;
+
+use PDO;
+
 class DB {
     private PDO $connection;
 

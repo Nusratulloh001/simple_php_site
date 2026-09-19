@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-
 class User {
     protected int $id;
     protected string $name;
