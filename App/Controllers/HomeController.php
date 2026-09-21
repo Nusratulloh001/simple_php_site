@@ -1,4 +1,11 @@
 <?php
 
+namespace App\Controllers;
 
-view('/../Views/home.view.php', ['pageTitle' => "Главная - Портфолио"]);
+class HomeController implements Controller
+{
+    public function index () : void
+    {
+        view('/../Views/home.view.php', ['pageTitle' => "Главная - Портфолио"]);
+    }
+}

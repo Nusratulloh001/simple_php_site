@@ -2,10 +2,13 @@
 
 namespace App\Modules;
 
+use App\Controllers\Controller;
+
 class Route {
+
     private array $routes = [];
 
-    public function newRoute (string $method, string $path, string $controller) : void
+    public function newRoute (string $method, string $path, array|string|callable|Controller $controller) : void
     {
         $this -> routes[$method][$path] = $controller;
     }
@@ -14,23 +17,16 @@ class Route {
     {
         return $this -> routes;
     }
-    public function get (string $path, string $controller = '') : void
+
+    public function get (string $path, array|string|callable|Controller $controller) : void
     {
         $this -> newRoute('GET', $path, $controller);
     }
 
-    public function post (string $path, string $controller = '') : void
+    public function dispatch () : void
     {
-        $this -> newRoute('POST', $path, $controller);
-    }
-
-    public function update (string $path, string $controller = '') : void
-    {
-        $this -> newRoute('PUT', $path, $controller);
-    }
-
-    public function delete (string $path, string $controller = '') : void
-    {
-        $this -> newRoute('DELETE', $path, $controller);
+        // [$controller, $method] = $this -> routes['GET']['/'];
+        // $instance = new $controller;
+        // $instance -> $method();
     }
 }

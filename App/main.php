@@ -1,14 +1,9 @@
 <?php
 
-use App\Modules\Route;
+use App\Classes\FrontUser;
 
-$route = new Route;
-$route -> get('/');
-$route -> delete('/post');
-$route -> get('/about');
-$route -> get('/contacts');
-$route -> post('/post');
-$route -> post('/create');
+$user = new FrontUser('nusret@gmail.com', '123123', 'Nusret', 'Sobir');
 
-$route -> post('/destroy');
-d($route -> getRoutes());
+$user -> setImage('avatar.png');
+
+echo $user -> getImage();   
