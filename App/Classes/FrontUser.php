@@ -22,4 +22,9 @@ class FrontUser extends User implements AvatarInterface
     {
         return $this -> path;
     }
+
+    public function test ()
+    {
+        return self::class;
+    }
 }

@@ -1,9 +1,6 @@
 <?php
 
+use App\Enums\UserStatus;
 use App\Classes\FrontUser;
 
-$user = new FrontUser('nusret@gmail.com', '123123', 'Nusret', 'Sobir');
-
-$user -> setImage('avatar.png');
-
-echo $user -> getImage();   
+$user = new FrontUser('n@gmail.com', "123", 'N', 'S');
