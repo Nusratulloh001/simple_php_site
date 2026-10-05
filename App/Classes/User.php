@@ -2,13 +2,21 @@
 
 namespace App\Classes;
 
-class User {
-    public string $email;
-    public string $password;
-    public string $firstName;
-    public string $lastName;
+use App\Traites\UserTrait;
+use Exception;
+use App\Exceptions\AttributeException;
+use App\Exceptions\PasswordException;
 
-    public function __construct(string $email, string $password, string $firstName, string $lastName)
+class User {
+
+    use UserTrait;
+    
+    private string $email;
+    private string $password;
+    private ?string $firstName = null;
+    private ?string $lastName = null;
+
+    public function __construct(string $email, string $password, ?string $firstName, ?string $lastName)
     {
         $this -> email = $email;
         $this -> password = $password;
@@ -16,10 +24,37 @@ class User {
         $this -> lastName = $lastName;
     }
 
-    public function getFullName () : string
+    /**
+     * Хосияти номуаянро ҳамчун хосияти дохилӣ бар мегардонад
+     * @return ?string
+     */
+    public function __get (?string $property) : string | Exception
     {
-        $namesOnArray = array_filter([$this -> firstName, $this -> lastName]);
-        $fullName = implode(' ', $namesOnArray);
-        return $fullName ?? 'Anonim user';
+        if ($property === "password") {
+            throw new PasswordException();
+        } else if (!isset($this -> $property)) {
+            throw new AttributeException($property);
+        }    
+        return $this -> $property;
+    }
+
+    /**
+     * Арзиши хосиятро иваз мекунад
+     * @param string $property
+     * @param mixed $value
+     * @return void
+     */
+    public function __set(string $property, mixed $value) : void
+    {
+        if (isset($this -> property)) {
+            $this -> $property = $value;
+        } else {
+            throw new AttributeException($property);
+        }
+    }
+
+    public function isPasswordCorrect (string $password) : bool
+    {
+        return $this -> password === $password;
     }
 }

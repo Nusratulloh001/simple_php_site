@@ -1,0 +1,17 @@
+Throwable (Интерфейс)
+├── Exception (Истисноҳои корбарӣ ва SPL)
+│   ├── LogicException
+│   │   ├── InvalidArgumentException
+│   │   ├── OutOfRangeException
+│   │   └── BadMethodCallException
+│   ├── RuntimeException
+│   │   ├── OutOfBoundsException
+│   │   └── UnexpectedValueException
+│   ├── PDOException
+│   └── JsonException
+│
+└── Error (Хатогиҳои системӣ)
+    ├── TypeError
+    ├── ParseError
+    └── ArithmeticError
+        └── DivisionByZeroError

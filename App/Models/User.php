@@ -11,9 +11,9 @@ class User {
     protected string $created;
     protected string $updated;
 
-    public function __construct()
+    public function __construct(string $name)
     {
-        
+        $this -> name = $name;
     }
 
     protected function init () : void

@@ -3,7 +3,7 @@
 namespace App\Modules\Databases;
 
 use PDO;
-
+use PDOStatement;
 class DB {
     private PDO $connection;
 
