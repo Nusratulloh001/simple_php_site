@@ -2,10 +2,16 @@
 
 namespace App\Controllers;
 
-class HomeController implements Controller
+use App\Controllers\Controller;
+
+class HomeController extends Controller
 {
     public function index () : void
     {
-        view('/../Views/home.view.php', ['pageTitle' => "Главная - Портфолио"]);
+        view('home');
+    }
+    public function about () : void
+    {
+        view("about");
     }
 }

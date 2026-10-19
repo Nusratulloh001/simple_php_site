@@ -8,7 +8,7 @@ function abort (string $viewOrController, int $code) : void {
 function view (string $view, array $data = []) : void
 {
     extract($data);
-    require __DIR__ . $view;
+    require __DIR__ . "/../Views/{$view}.view.php";
 }
 
 function d (mixed $value) : void

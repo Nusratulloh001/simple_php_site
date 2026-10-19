@@ -1,0 +1,14 @@
+{
+  "users": [
+    { "id": 1, "name": "Иван Петров", "age": 28, "active": true },
+    { "id": 2, "name": "Мария Сидорова", "age": 34, "active": false },
+    { "id": 3, "name": "Алексей Смирнов", "age": 22, "active": true }
+  ],
+  "names": [
+    "Muhammad",
+    "Abubakr",
+    "Umar",
+    "Usman",
+    "Ali"
+  ]
+}
